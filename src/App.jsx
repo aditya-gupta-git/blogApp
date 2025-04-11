@@ -1,5 +1,5 @@
 import React from 'react'
-import LOgin from './components/LOgin'
+import Login from './components/LOgin'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Blog from './components/Blog'
 import Register from './components/Register'
@@ -10,7 +10,7 @@ const App = () => {
     <div>
      <Router>
       <Routes>
-        <Route path='/' element={<LOgin />} />
+        <Route path='/' element={<Login />} />
         <Route path='/Blog' element={<Protected><Blog/></Protected>}/>
         <Route path='/register' element={<Register />} />
       </Routes>

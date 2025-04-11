@@ -62,4 +62,4 @@ const LOgin = () => {
   )
 }
 
-export default LOgin
+export default Login
