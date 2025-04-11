@@ -1,16 +1,17 @@
 import React from 'react'
-import Login from './components/LOgin'
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Blog from './components/Blog'
 import Register from './components/Register'
 import Protected from './components/Protected'
+import Login from './components/Login'
 
 const App = () => {
   return (
     <div>
      <Router>
       <Routes>
-        <Route path='/' element={<Login />} />
+        <Route path='/' element={<Login/>} />
         <Route path='/Blog' element={<Protected><Blog/></Protected>}/>
         <Route path='/register' element={<Register />} />
       </Routes>
