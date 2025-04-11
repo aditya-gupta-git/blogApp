@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "user1",
+      "password": "password1",
+      "email": "user1@example.com"
+    },
+    {
+      "id": "2",
+      "username": "user2",
+      "password": "password2",
+      "email": "user2@example.com"
+    },
+    {
+      "id": "da8c",
+      "username": "aditya",
+      "email": "aditya@gmial.com",
+      "password": "123456"
+    },
+    {
+      "id": "2e77",
+      "username": "a",
+      "email": "a@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "6945",
+      "username": "b",
+      "email": "b@gmail.com",
+      "password": "123654"
+    },
+    {
+      "id": "04ac",
+      "username": "c ",
+      "email": "c@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "auth": [
+    {
+      "id": "1",
+      "name": "aditya",
+      "password": "aditya@123"
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "First Blog Post",
+      "content": "This is the content of the first blog post. Lorem ipsum dolor sit amet...",
+      "summary": "Summary of the first blog post.",
+      "comments": [
+        {
+          "id": 1,
+          "userId": 2,
+          "comment": "Great post! Thanks for sharing."
+        },
+        {
+          "id": 2,
+          "userId": 1,
+          "comment": "I'm glad you liked it!"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "userId": 2,
+      "title": "Second Blog Post",
+      "content": "This is the content of the second blog post. Ut enim ad minim veniam...",
+      "summary": "Summary of the second blog post.",
+      "comments": [
+        {
+          "id": 3,
+          "userId": 1,
+          "comment": "Interesting read."
+        }
+      ]
+    },
+    {
+      "id": "ee1f",
+      "title": "hhelo",
+      "summary": "njcd",
+      "content": "cd j"
+    },
+    {
+      "id": "8dbb",
+      "title": "hello",
+      "summary": "hello India",
+      "content": "How are you ?"
+    },
+    {
+      "id": "ff4c",
+      "title": "NAmsate ",
+      "summary": "bhn",
+      "content": "vf "
+    },
+    {
+      "id": "0684",
+      "title": "swx",
+      "summary": "ddc",
+      "content": "cd"
+    },
+    {
+      "id": "f8b1",
+      "title": "dc",
+      "summary": "dcx",
+      "content": "dc"
+    }
+  ]
+}
