@@ -5,6 +5,7 @@ import Blog from './components/Blog'
 import Register from './components/Register'
 import Protected from './components/Protected'
 import Login from './components/Login'
+import Blogstore from './components/Blogstore'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Login/>} />
         <Route path='/Blog' element={<Protected><Blog/></Protected>}/>
+        <Route path='/blogstore' element={<Protected><Blogstore/></Protected>} />
         <Route path='/register' element={<Register />} />
       </Routes>
      </Router>

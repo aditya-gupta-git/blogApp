@@ -1,6 +1,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import {toast } from 'react-toastify';
+import {signInWithPopup} from 'firebase/auth'
+import { auth, provider } from '../firebase/firestore';
 
 const Login = () => {
 
@@ -12,17 +15,22 @@ const Login = () => {
 
     function Loginhandler(){
         if(!username || !password ){
-            setError("Please filled both field")
+            toast.error("Please filled both field")
             return
         }
         axios.get('http://localhost:3000/users', {
             params: {username, password}
+            
         })
 
         .then((res)=> {
             if(res.data.length > 0){
                 localStorage.setItem("isloggedIn", "true"); 
+                // console.log(localStorage.getItem("isloggedIn"))
+                toast.success("Login Successfull")
                 navigate('/Blog') 
+                
+                
             }
 
             else{
@@ -33,21 +41,30 @@ const Login = () => {
         .catch((err)=>{
             console.error(err)
             setError("Try again")
+           
             
         })
 
-        function logout(){
-            localStorage.removeItem("isloggedIn")
-            navigate("/")
-        }
+        // function logout(){
+        //     localStorage.removeItem("isloggedIn")
+        //     navigate("/")
+        // }
 
         // .then(()=> navigate('/Blog'))
         // .catch(err=> console.log(err))
-
-        
-       
-
     }
+
+    const GoogleLogin = async ()=>{
+        try {
+            await signInWithPopup(auth, provider)
+            navigate('/Blog')
+            
+        } catch (error) {
+        console.error(error)
+            
+        }
+    }
+    
 
   return (
     <div className='flex items-center justify-center h-screen'>
@@ -57,6 +74,8 @@ const Login = () => {
             <input type="password" placeholder='Password' onChange={(e)=> setPassword(e.target.value)} value={password} className='outline-1' />
             <button onClick={Loginhandler} className='border-1'>Login</button>
             <p>Don't have an Account <a href="/register" className='text-blue-500'>Signup</a> </p>
+
+            <button onClick={()=>GoogleLogin()}>Sign-In with Google</button>
         </div>
     </div>
   )

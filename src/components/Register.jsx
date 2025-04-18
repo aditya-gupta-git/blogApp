@@ -11,6 +11,26 @@ const Register = () => {
 
     const navigate =  useNavigate()
 
+
+    // function Registerhandler() {
+
+    //     setError("")
+
+    //     const newUser = {
+    //         username,
+    //         email, password
+    //     }
+    //     axios.post('http://localhost:3000/users', newUser )
+    //     .then((res)=>{
+    //         alert("Successfully Register")
+    //         navigate('/')
+    //     })
+
+
+    //     .catch((err)=> setError("Something went wrong"))
+
+    // }
+
    
 
     async function Registerhandler() {
